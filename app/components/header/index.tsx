@@ -28,14 +28,14 @@ function CustomIcon({ label, icon, ...rest }: CustomToolTipProps) {
             {...rest}
         >
             <IconButton aria-label={label}
-                fontSize={'24px'}color={'#AEBAC1'} bg={'transparent'} _hover={{ bg: 'transparent' }}>{icon}</IconButton>
+                fontSize={'24px'} color={'#AEBAC1'} bg={'transparent'} _hover={{ bg: 'transparent' }}>{icon}</IconButton>
         </Tooltip>
     )
 }
 
 export default function Header(props: any) {
     return (
-        <Flex justify='space-between' borderRight={'1px solid #AEBAC1'} {...props} bg={'#202C33'} py={'3'} px='6' w={'510px'} bgColor={'#202C33'}>
+        <Flex justify='space-between' borderRight={'1px solid #AEBAC1'} {...props} bg={'#202C33'} py={'3'} px='6' bgColor={'#202C33'} w={'520px'}> 
             <Avatar name="perfil" src='../../../assets/avatar.jpg' boxSize='40px' >
             </Avatar>
             <HStack spacing={3}>
