@@ -4,7 +4,7 @@ import { Flex, Avatar, IconButton, Tooltip, HStack } from '@chakra-ui/react'
 import { GroupIcon, StatusIcon, ChannelsIcon, NewChatIcon, MoreIcon } from '../icons'
 import React from 'react'
 
-interface CustomToolTipProps {
+interface CustomIconProps {
     label: string,
     icon: React.ReactNode,
 }
@@ -17,7 +17,7 @@ const iconData = [
     { icon: <MoreIcon />, label: 'Mais opções' }
 ]
 
-function CustomIcon({ label, icon, ...rest }: CustomToolTipProps) {
+function CustomIcon({ label, icon, ...rest }: CustomIconProps) {
     return (
         <Tooltip
             shouldWrapChildren
@@ -35,7 +35,7 @@ function CustomIcon({ label, icon, ...rest }: CustomToolTipProps) {
 
 export default function Header(props: any) {
     return (
-        <Flex justify='space-between' borderRight={'1px solid #AEBAC1'} {...props} bg={'#202C33'} py={'3'} px='6' bgColor={'#202C33'} w={'520px'}> 
+        <Flex justify='space-between' borderRight={'1px solid #AEBAC1'} {...props} bg={'#202C33'} py={'3'} px='6' bgColor={'#202C33'} w="33%">
             <Avatar name="perfil" src='../../../assets/avatar.jpg' boxSize='40px' >
             </Avatar>
             <HStack spacing={3}>
