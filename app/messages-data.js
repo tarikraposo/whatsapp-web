@@ -1,9 +1,9 @@
 export const chatData = [
     {
-        name: 'Kbia',
         src: '../assets/images/kbia.png',
-        message: 'Comeu direito hoje??!',
         date: 'Saturday',
+        message: 'Comeu direito hoje??!',
+        name: 'Kbia',
     },
     {
         name: 'Khalil',

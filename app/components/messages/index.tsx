@@ -1,12 +1,12 @@
 import { Avatar, HStack, Flex, Box, Text, Stack, StackDivider } from "@chakra-ui/react";
 import { CheckIcon } from "../icons";
-import { DatePicker } from "@orange_digital/chakra-datepicker";
+import { chatData } from "../../messages-data"
 
 interface MessagesProps {
     name: string;
     message: string;
     src: string;
-    date: Date;
+    date: string;
 }
 
 
@@ -20,30 +20,45 @@ export function Messages({ name, message, src, date, ...rest }: MessagesProps) {
             {...rest}
         >
             <Avatar mx="3" name={name} src={src}></Avatar>
-            <Box>
+            <Box flex={'1'} pr={4}>
                 <Flex justify="space-between">
                     <Box>
-                        <Text>{name}</Text>
-                        <HStack>
+                        <Text color="#fff">{name}</Text>
+                        <HStack color="white">
                             <CheckIcon></CheckIcon>
                             <Text color="#AEBAC1">{message}</Text>
                         </HStack>
                     </Box>
-                    <DatePicker initialValue={new Date(date)} />
+                    <Text color="#AEBAC1">{date}</Text>
                 </Flex>
             </Box>
 
         </HStack>
     )
-
-
 }
-export function ListMessages() {
-    return (
-        <Stack spacing={0} pr={1} divider={<StackDivider w={'80%'} alignSelf={'flex-end'}/>}/>
-        
 
-       
+export function ListMessages(props:any) {
+    return (
+        <Stack
+            spacing={0}
+            pr={1}
+            divider={<StackDivider w='80%'
+                alignSelf='flex-end' />}
+            {...props}
+            bg={'#111B21'}
+            w={'33%'}
+            borderRight={"1px solid #AEBAC1"}
+        >
+
+            {chatData.map((item, index) => (
+                <Messages 
+                key={index}
+                    src={item.src}
+                    date={item.date}
+                    message={item.message}
+                    name={item.name} />
+            ))}
+        </Stack>
     )
 
 }

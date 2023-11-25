@@ -36,7 +36,7 @@ function CustomIcon({ label, icon, ...rest }: CustomIconProps) {
 export default function Header(props: any) {
     return (
         <Flex justify='space-between' borderRight={'1px solid #AEBAC1'} {...props} bg={'#202C33'} py={'3'} px='6' bgColor={'#202C33'} w="33%">
-            <Avatar name="perfil" src='../../../assets/avatar.jpg' boxSize='40px' >
+            <Avatar name="perfil" boxSize='40px' >
             </Avatar>
             <HStack spacing={3}>
                 {iconData.map((item, index) => (

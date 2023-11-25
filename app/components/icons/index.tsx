@@ -1,11 +1,11 @@
 'use client'
 
 import { Icon } from '@chakra-ui/react'
-import { IoFilter, IoCheckmarkDone  } from "react-icons/io5";
+import { IoFilter, IoCheckmarkDone } from "react-icons/io5";
 import { MdGroups, MdMoreVert } from "react-icons/md";
 import { BsChatDots, BsClockHistory } from "react-icons/bs";
 import { RiChatNewLine } from "react-icons/ri";
-import { SearchIcon } from "@chakra-ui/icons"
+
 
 
 export function GroupIcon() {
@@ -34,9 +34,9 @@ export function FilterIcon() {
 }
 
 export function SearchIco() {
-    return <Icon as={SearchIcon} />
+    return <Icon as={IoCheckmarkDone} />
 }
 
 export function CheckIcon() {
-    return <Icon as={IoCheckmarkDone } />
+    return <Icon as={IoCheckmarkDone} />
 }
