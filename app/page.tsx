@@ -1,14 +1,12 @@
-import { Box } from "@chakra-ui/react";
-import Header from "./components/header";
-import { Search } from "./components/left-side";
-import { ListMessages } from "./components/messages";
+import { Box, Flex } from "@chakra-ui/react";
+import { LeftSide } from "./components/left-side";
+import { RightSide } from "./components/right-side";
 
 export default function Home() {
   return (
-    <Box>
-      <Header />
-      <Search/>
-      <ListMessages />
-    </Box>
+    <Flex  justify={"center"} px={"8%"} py={"20px"} maxH={"100vh"} overflow={"hidden"} bg={"#0c1317"}>
+      <LeftSide />
+      <RightSide />
+    </Flex>
   )
 }

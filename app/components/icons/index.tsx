@@ -5,6 +5,7 @@ import { IoFilter, IoCheckmarkDone } from "react-icons/io5";
 import { MdGroups, MdMoreVert } from "react-icons/md";
 import { BsChatDots, BsClockHistory } from "react-icons/bs";
 import { RiChatNewLine } from "react-icons/ri";
+import { IoIosSearch } from "react-icons/io";
 
 
 
@@ -34,7 +35,7 @@ export function FilterIcon() {
 }
 
 export function SearchIco() {
-    return <Icon as={IoCheckmarkDone} />
+    return <Icon as={IoIosSearch} />
 }
 
 export function CheckIcon() {

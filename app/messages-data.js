@@ -13,9 +13,9 @@ export const chatData = [
     },
     {
         name: 'Dantas',
-        src: '../assets/images/dantas.png',
+        src: 'https://cdn.awsli.com.br/2500x2500/129/129485/produto/15369807/2d7e254090.jpg',
         message: 'Cervejinha gelada? Só aqui!',
-        date: 'Spy',
+        date: 'Monday',
     },
     {
         name: 'Pai',

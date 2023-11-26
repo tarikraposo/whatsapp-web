@@ -1,6 +1,7 @@
 import { Avatar, HStack, Flex, Box, Text, Stack, StackDivider } from "@chakra-ui/react";
 import { CheckIcon } from "../icons";
 import { chatData } from "../../messages-data"
+import { Divider } from '@chakra-ui/react'
 
 interface MessagesProps {
     name: string;
@@ -20,16 +21,18 @@ export function Messages({ name, message, src, date, ...rest }: MessagesProps) {
             {...rest}
         >
             <Avatar mx="3" name={name} src={src}></Avatar>
-            <Box flex={'1'} pr={4}>
+            <Box flex={'1'} pr={1} borderBottom={"1px solid rgb(134, 150, 160, 0.15)"} >
+            
                 <Flex justify="space-between">
-                    <Box>
-                        <Text color="#fff">{name}</Text>
-                        <HStack color="white">
+
+                    <Box mb={2}>
+                        <Text color="#fff" fontSize={"17px"}>{name}</Text>
+                        <HStack color="#8696a0">
                             <CheckIcon></CheckIcon>
-                            <Text color="#AEBAC1">{message}</Text>
+                            <Text color="#8696a0" fontSize={"14px"}>{message}</Text>
                         </HStack>
                     </Box>
-                    <Text color="#AEBAC1">{date}</Text>
+                    <Text color="#8696a0" fontSize={"12px"}>{date}</Text>
                 </Flex>
             </Box>
 
@@ -37,28 +40,26 @@ export function Messages({ name, message, src, date, ...rest }: MessagesProps) {
     )
 }
 
-export function ListMessages(props:any) {
+export function ListMessages(props: any) {
     return (
-        <Stack
-            spacing={0}
-            pr={1}
-            divider={<StackDivider w='80%'
-                alignSelf='flex-end' />}
-            {...props}
-            bg={'#111B21'}
-            w={'33%'}
-            borderRight={"1px solid #AEBAC1"}
-        >
-
-            {chatData.map((item, index) => (
-                <Messages 
-                key={index}
-                    src={item.src}
-                    date={item.date}
-                    message={item.message}
-                    name={item.name} />
-            ))}
-        </Stack>
+        <Box display={"flex"} overflow={"hidden"} scrollBehavior={"auto"} >
+            <Stack
+                w={"100%"}
+                overflow={"hidden"}
+                spacing={0}
+                pr={1}
+                {...props}
+            >
+                {chatData.map((item, index) => (
+                    <Messages
+                        key={index}
+                        src={item.src}
+                        date={item.date}
+                        message={item.message}
+                        name={item.name} />
+                ))}
+            </Stack>
+        </Box>
     )
 
 }
