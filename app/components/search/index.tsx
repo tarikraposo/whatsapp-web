@@ -7,7 +7,7 @@ import { FilterIcon, SearchIco } from "../icons";
 export function Search() {
 
     return (
-        <HStack bg={'#111B21'} px='6' py='3'>
+        <HStack bg={'#111B21'} px='6' py='3' position={"relative"}>
             <InputGroup >
                 <Tooltip
                     shouldWrapChildren

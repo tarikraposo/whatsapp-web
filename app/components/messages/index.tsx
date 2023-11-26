@@ -21,8 +21,9 @@ export function Messages({ name, message, src, date, ...rest }: MessagesProps) {
             {...rest}
         >
             <Avatar mx="3" name={name} src={src}></Avatar>
-            <Box flex={'1'} pr={1} borderBottom={"1px solid rgb(134, 150, 160, 0.15)"} >
-            
+            <Box flex={'1'} pr={1} borderBottom={"1px solid rgb(134, 150, 160, 0.15)"}
+            >
+
                 <Flex justify="space-between">
 
                     <Box mb={2}>
@@ -42,7 +43,7 @@ export function Messages({ name, message, src, date, ...rest }: MessagesProps) {
 
 export function ListMessages(props: any) {
     return (
-        <Box display={"flex"} overflow={"hidden"} scrollBehavior={"auto"} >
+        <Box display={"flex"} >
             <Stack
                 w={"100%"}
                 overflow={"hidden"}
